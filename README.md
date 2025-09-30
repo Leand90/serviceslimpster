@@ -23,6 +23,35 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+
+/* Card de Faxina Residencial */
+#planos .service-card:nth-child(1) {
+    background-image: url('https://media.istockphoto.com/id/870219332/pt/foto/cleaning-lady-with-a-bucket-and-cleaning-products.jpg?s=612x612&w=0&k=20&c=onJR8R7GYy3Zc9fw-d6m0NWevZbCJz_9p6GMaynMeX8='); /* Imagem Residencial */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    
+}
+
+/* Card de Faxina Comercial */
+#planos .service-card:nth-child(2) {
+    background-image: url('https://media.istockphoto.com/id/2149432163/pt/foto/smiling-caucasian-female-construction-worker-on-the-site.jpg?s=612x612&w=0&k=20&c=p-W16aqCNtt68xNj3zXkZsaEMAWxEubSVIZr0Q4DdDc='); /* Imagem Comercial */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Card de Faxina Pós-Obra */
+#planos .service-card:nth-child(3) {
+    background-image: url('https://plus.unsplash.com/premium_photo-1661662878810-67afdda3ef6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAxfHxlcXVpcGFtZW50byUyMGxpbXBlemF8ZW58MHx8MHx8fDA%3D'); /* Imagem Pós-Obra */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+
+
 /* --- ESTILOS GLOBAIS --- */
 body { 
     font-family: 'Segoe UI', Arial, sans-serif; 
@@ -76,10 +105,21 @@ nav .btn-agendar {
     font-weight: bold;
     transition: 0.3s;
     margin-left: 10px;
+    cursor: pointer;
 }
 nav .btn-agendar:hover {
-    background: #FFB800;
+    background: #3f75eb;
+    color: #FFB800;
 }
+
+
+h1{color: #fdfcfc;  text-shadow: 
+        1px 1px 0 #0c0c0c,  /* contorno amarelo */
+        -2px 1px 0 #3485f0,
+        1px -1px 0 #3485f0,
+        -1px -1px 0 #FFD700,
+        0px 0px 2px #fafaf8; /* brilho suave */
+   }
 
 /* HERO */
 .hero { 
@@ -106,9 +146,12 @@ nav .btn-agendar:hover {
     font-size: 1.1em;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
 }
 .hero button:hover {
     background-color: #FFB800; 
+    color: black;
+    cursor: pointer;
 }
 
 /* CARROSSEL */
@@ -283,6 +326,8 @@ footer p {
         height: auto;
     }
 }
+
+
 </style>
 </head>
 <body>
@@ -327,6 +372,51 @@ footer p {
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </section>
 
+<!--- CARDS PREÇOS-->
+
+<section id="planos" class="services">
+    <!-- Card de Faxina Residencial -->
+    <div class="service-card">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+           
+            <h1>Escolha Faxina Apenas Dia</h1>
+            <button  id="btn-agendar"  onclick="enviarWhatsApp('Faxina Apenas Dia')" style="background:#FFD700;color:#333;padding:10px 20px;border:none;border-radius:5px;">
+                ORÇAMENTO
+            </button>
+        </div>
+    </div>
+
+    <!-- Card de Faxina Comercial -->
+    <div class="service-card">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+            
+            <h1>Escolha Faxina para a Semana</h1>
+                <button onclick="enviarWhatsApp('Faxina Semana')" style="background:#FFD700;color:#333;padding:10px 20px;border:none;border-radius:5px;">
+                    ORÇAMENTO
+            </button>
+        </div>
+    </div>
+
+    <!-- Card de Faxina Pós-Obra -->
+    <div class="service-card">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+            
+            <h1>Escolha Faxina para o Mês</h1>
+            <button onclick="enviarWhatsApp('Faxina Mensal')" style="background:#FFD700;color:#333;padding:10px 20px;border:none;border-radius:5px;">
+                ORÇAMENTO
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- FIM -->
 <section class="hero">
     <center><img src="ico_02.png" width="120" height="120" title="Limpster - Serviços de Limpeza!"></center>
     <h2>Sua limpeza rápida e profissional</h2>
@@ -413,6 +503,14 @@ function showSlides(n) {
     }, 5000); 
 }
 </script>
+
+<script>
+    function enviarWhatsApp(plano) {
+    let numero = "5511961413348";
+    let mensagem = `Olá! Tudo Bom?! Quero um orçamento para o plano: ${plano} com a Limpster.`;
+    let url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, "_blank");
+    }
+    </script>
 </body>
 </html>
-
