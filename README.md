@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-3305836590830208">    
 <title>Limpster Soluções em Limpeza - Residencial, Comercial e Pós-Obra</title>
 
 <!-- SEO -->
@@ -15,8 +16,8 @@
 <meta property="og:title" content="Limpster Soluções em Limpeza">
 <meta property="og:description" content="Sua limpeza rápida e profissional. Deixe sua casa ou empresa brilhando com a Limpster.">
 <meta property="og:image" content="comercial.png">
-<meta property="og:url" content="#">
-<meta property="og:type" content="website">
+<meta property="og:url" content="https://leand90.github.io/serviceslimpster">
+<meta property="og:type" content="Limpster Service e Qualidade">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
