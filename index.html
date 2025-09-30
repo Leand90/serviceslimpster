@@ -349,7 +349,7 @@ footer p {
         <div class="slide">
             <img src="comercial.png" alt="Limpeza Residencial">
             <div class="caption">
-                <h3>LIMPEZA  CASA OU SEU APARTAMENTO</h3>
+                <h3>LIMPEZA CASA & APARTAMENTO</h3>
                 <p>Conforto e higiene para sua família.</p>
             </div>
         </div>
